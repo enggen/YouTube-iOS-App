@@ -32,12 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // change status bar font color to white
         application.statusBarStyle = .lightContent
         
-        let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
-
-        window?.addSubview(statusBarBackgroundView)
-        window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
-        window?.addConstraintsWithFormat(format: "V:|[v0(50)]", views: statusBarBackgroundView)
+//        let statusBarBackgroundView = UIView()
+//        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+//
+//        window?.addSubview(statusBarBackgroundView)
+//        window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
+//        window?.addConstraintsWithFormat(format: "V:|[v0(50)]", views: statusBarBackgroundView)
     
         return true
     }
