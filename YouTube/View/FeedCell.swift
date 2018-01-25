@@ -44,8 +44,9 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
         
         collectionView.register(VideoCell.self, forCellWithReuseIdentifier: cellId)
+        
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return videos?.count ?? 0
     }

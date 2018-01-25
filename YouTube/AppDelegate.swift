@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // change status bar font color to white
         application.statusBarStyle = .lightContent
+
         
 //        let statusBarBackgroundView = UIView()
 //        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)

@@ -14,11 +14,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     let titles = ["Home", "Trending", "Subscriptions", "Account"]
     let trendingCellId = "trendingCellId"
     let subscriptionCellId = "subscriptionCellId"
+    let personalCellId = "personalCellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        navigationController?.navigationBar.isTranslucent = false 
+        navigationController?.navigationBar.isTranslucent = false
         
         // navigation title label
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
@@ -50,6 +51,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(TrendingCell.self, forCellWithReuseIdentifier: trendingCellId)
         collectionView?.register(SubscriptionCell.self, forCellWithReuseIdentifier: subscriptionCellId)
+        collectionView?.register(PersonalCell.self, forCellWithReuseIdentifier: personalCellId)
         
         // push video collectionView under the custome menubar
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
@@ -57,6 +59,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         //while scrolling page horizontally page will complete the land
         collectionView?.isPagingEnabled = true
+        
+        collectionView?.isScrollEnabled = false
     }
     
     // right nav bar button item
@@ -157,6 +161,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             identifier = trendingCellId
         } else if indexPath.item == 2 {
             identifier = subscriptionCellId
+        } else if indexPath.item == 3 {
+            identifier = personalCellId
         } else {
             identifier = cellId
         }
