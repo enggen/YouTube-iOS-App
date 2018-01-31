@@ -59,7 +59,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = (frame.width-16-16) * 9/16
-        return CGSize(width: frame.width, height: height + 16 + 88)
+        return CGSize(width: frame.width, height: height + 26 + 88)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -70,7 +70,6 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         let videoLauncher = VideoLauncher()
         videoLauncher.showVideoPlayer()
     }
-    
     
 }
 

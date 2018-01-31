@@ -132,7 +132,7 @@ class VideoCell: BaseCell {
         addConstraintsWithFormat(format: "H:|-16-[v0(44)]", views: userProfileImageView)
         
         //vertical constraints
-        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(44)]-36-[v2(1)]|", views: thumbnailImageView, userProfileImageView, separatorView)
+        addConstraintsWithFormat(format: "V:|-30-[v0]-8-[v1(44)]-36-[v2(1)]|", views: thumbnailImageView, userProfileImageView, separatorView)
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: separatorView)
         
